@@ -61,6 +61,12 @@ export default {
         this.data.push('Вложение 1 для записи № ' + this.id)
         this.data.push('Вложение 2 для записи № ' + this.id)
         this.data.push('Вложение 3 для записи № ' + this.id)
+        break
+      case 4:
+        this.data.push('Вложение 1 для записи № ' + this.id)
+        this.data.push('Вложение 2 для записи № ' + this.id)
+        this.data.push('Вложение 3 для записи № ' + this.id)
+        this.data.push('Вложение 4 для записи № ' + this.id)
     }
   }
 }
