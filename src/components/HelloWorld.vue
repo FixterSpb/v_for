@@ -1,6 +1,7 @@
 <template>
   <div class="hello">
     <button @click="addItem">Добавить запись</button>
+    <button @click="update">Обновить</button>
     <table>
       <tr
         v-for="(item, idx) in data"
@@ -21,7 +22,7 @@
 </template>
 
 <script>
-import {get, del, add} from "../helpers/storage";
+import {get, del, add, update} from "../helpers/storage";
 import VForComponent from './VForComponent'
 export default {
   name: 'HelloWorld',
@@ -42,6 +43,9 @@ export default {
         title: 'Запись № ',
         status: Math.round(Math.random() * 2) + 1
       })]
+    },
+    update() {
+      this.data = update()
     },
     deleteItem (id) {
       this.data = del(id)

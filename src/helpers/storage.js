@@ -35,3 +35,15 @@ const getId = (data) => {
     return id
     // return tempData.sort((a, b) => a.id - b.id).shift
 }
+
+export const update = () => {
+    const data = get()
+    data.map(el => {
+        if (el.status < 4) {
+            el.status++
+        }
+        return el
+    })
+    localStorage.setItem('data', JSON.stringify(data))
+    return data
+}
